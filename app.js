@@ -57,7 +57,7 @@
 // });
 
 const text = document.createElement('h1');
-text.textContent = 'Slide on the boxes';
+text.textContent = 'Swipe on the boxes';
 text.classList.add('text');
 document.body.append(text);
 
@@ -72,11 +72,11 @@ for (i = 0; i < 400; i++) {
 }
 
 const squares = document.querySelectorAll('.square');
+const colors = ['#eb2020', '#7b1ef5', '#5aeb20', '#6f32a0', '#fff', '#1e7bf5', '#26daa4', '#ffd900', '#f091d0', '#2fc3ce', '#ee1ef5', '#98f51e', '#acce2f'];
 
 squares.forEach(square => {
     square.addEventListener('mouseover', () => {
-        const colors = ['#eb2020', '#7b1ef5', '#5aeb20', '#6f32a0', '#1e7bf5', '#26daa4', '#ffd900', '#f091d0', '#2fc3ce', '#ee1ef5', '#98f51e', '#acce2f'];
-        const cc = colors[Math.round(Math.random() * 11)];
+        const cc = colors[Math.round(Math.random() * 12)];
         square.style.backgroundColor = cc;
         container.style.border = `2px solid ${cc}`;
     });
